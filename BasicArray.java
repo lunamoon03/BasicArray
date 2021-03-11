@@ -1,33 +1,33 @@
 
 /**
- * Write a description of class BasicArray here.
+ * Demonstrated basic array declaration and use
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author L Wilkes
+ * @version 22/03/2021
  */
 public class BasicArray
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
-     * Constructor for objects of class BasicArray
+     * Creates an array, fills it with various int values,
+     * modifies one value, then prints them out
      */
-    public BasicArray()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public static void main(String[] args) {
+        // declaring constants
+        final int LIMIT = 15, MULTIPLE = 10;
+        
+        // declaring the array
+        int[] list = new int[LIMIT];
+        
+        // initialise the array values
+        for (int index = 0; index < LIMIT; index++) {
+            list[index] = index * MULTIPLE;
+        }
+        
+        list[5] = 999; // change one array value
+        
+        // print the array values out
+        for (int value : list) {
+            System.out.print(value + "    ");
+        }
     }
 }
